@@ -79,6 +79,9 @@ const FindThing = () => {
           </button>
         </div>
       </div>
+      <div className="card result" style={{ margin: "0px auto" }}>
+        <h4>Results</h4>
+      </div>
       <div className="home">
         {data.map((item) => {
           return (
