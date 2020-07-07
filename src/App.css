@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Yanone+Kaffeesatz:wght@600&display=swap");
 .App {
   margin: 0 auto;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.my-card {
+  margin-top: 30px;
+}
+.auth-card {
+  padding: 40px;
+  max-width: 400px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid rgb(170, 0, 255) !important;
+  box-shadow: 0 1px 0 0 rgb(170, 0, 255) !important;
+}
+
+.nav-button {
+  letter-spacing: 2px;
 }
