@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://save-things.herokuapp.com/",
-  "engines": {
-    "node": "12.18.0"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
