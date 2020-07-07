@@ -85,13 +85,13 @@ const FindThing = () => {
       <div className="home">
         {data.map((item) => {
           return (
-            <div className="my-card">
+            <div className="my-card" key={item.id}>
               <div className="card auth-card" style={{ margin: "0px auto" }}>
-                <div class="card-stacked">
-                  <div class="card-content">
+                <div className="card-stacked">
+                  <div className="card-content">
                     <p>{item.description}</p>
                   </div>
-                  <div class="card-action">
+                  <div className="card-action">
                     <a
                       href={item.website}
                       target="_blank"
