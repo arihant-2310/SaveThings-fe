@@ -34,6 +34,7 @@ const CreateThing = () => {
           history.push("/create");
         }
       })
+
       .catch((err) => {
         console.log(err);
       });
