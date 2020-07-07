@@ -11,14 +11,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <switch>
+        <Switch>
           <Route exact path="/find">
             <FindThing />
           </Route>
           <Route exact path="/create">
             <CreateThing />
           </Route>
-        </switch>
+        </Switch>
       </BrowserRouter>
     </div>
   );
