@@ -5,7 +5,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-wrapper purple accent-4">
           <a
-            href="/home"
+            href="/"
             className="left brand-logo"
             style={{ marginLeft: "10px" }}
           >

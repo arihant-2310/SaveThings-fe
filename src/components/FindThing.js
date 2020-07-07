@@ -92,7 +92,11 @@ const FindThing = () => {
                     <p>{item.description}</p>
                   </div>
                   <div class="card-action">
-                    <a href={item.website} target="_blank">
+                    <a
+                      href={item.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {item.website}
                     </a>
                   </div>
