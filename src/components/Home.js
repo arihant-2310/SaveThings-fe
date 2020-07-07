@@ -1,7 +1,7 @@
 import React from "react";
 const Home = () => {
   return (
-    <div>
+    <div className="home-main">
       <h1 className="home-text">
         <span className="blinking">Oh, hi there!</span>
       </h1>

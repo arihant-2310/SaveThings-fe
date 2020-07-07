@@ -27,7 +27,7 @@ const Navbar = () => {
               <a
                 href="/find"
                 className="waves-effect waves-light btn-small #b388ff deep-purple accent-1"
-                style={{ borderRadius: "5px" }}
+                style={{ borderRadius: "5px", marginLeft: "1px" }}
               >
                 <span className="nav-button">Find</span>
                 <i className="material-icons right">search</i>

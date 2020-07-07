@@ -34,6 +34,7 @@
   text-align: center;
   margin-top: 250px;
 }
+
 @keyframes blinkingText {
   0% {
     color: #000;
