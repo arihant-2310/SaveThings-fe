@@ -9,15 +9,18 @@ const FindThing = () => {
   const [data, setData] = useState([]);
 
   const uploadFields = () => {
-    fetch(`/api/v1/things/get_things/${userid}`, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        keywords,
-      }),
-    })
+    fetch(
+      `https://save-things.herokuapp.com/api/v1/things/get_things/${userid}`,
+      {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          keywords,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {

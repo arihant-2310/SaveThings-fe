@@ -10,17 +10,20 @@ const CreateThing = () => {
   const [information, setInformation] = useState("");
 
   const uploadFields = () => {
-    fetch(`/api/v1/things/create_thing/${userid}`, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        description,
-        keywords,
-        website: information,
-      }),
-    })
+    fetch(
+      `https://save-things.herokuapp.com/api/v1/things/create_thing/${userid}`,
+      {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          description,
+          keywords,
+          website: information,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
