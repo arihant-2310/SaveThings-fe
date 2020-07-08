@@ -2,7 +2,7 @@
   "name": "save_things_fe",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://save-things.herokuapp.com/",
+  "proxy": "https://save-things.herokuapp.com/",
   "engines": {
     "node": "12.18.0"
   },
@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "proxy": "http://save-things.herokuapp.com/"
+    "proxy": "https://save-things.herokuapp.com/"
   },
   "eslintConfig": {
     "extends": "react-app"
