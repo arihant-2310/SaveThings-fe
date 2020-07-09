@@ -12,6 +12,7 @@ const Navbar = () => {
             style={{ marginLeft: "10px" }}
             initial={{ y: -250 }}
             animate={{ y: -2 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
           >
             SaveThings
           </motion.a>
