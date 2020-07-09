@@ -63,7 +63,12 @@ const CreateThing = () => {
     }
   };
   return (
-    <div className="my-card">
+    <motion.div
+      className="my-card"
+      initial={{ y: "2vw" }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 120, delay: 0.3, duration: 1 }}
+    >
       <div
         className="card auth-card input-field"
         style={{ margin: "0px auto" }}
@@ -103,7 +108,7 @@ const CreateThing = () => {
           Keep <i className="material-icons right">note_add</i>
         </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
