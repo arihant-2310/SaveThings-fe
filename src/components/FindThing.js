@@ -95,6 +95,7 @@ const FindThing = () => {
         <motion.div
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 120 }}
           className="card result"
           style={{ margin: "0px auto" }}
         >
