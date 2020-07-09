@@ -73,7 +73,14 @@ const CreateThing = () => {
         className="card auth-card input-field"
         style={{ margin: "0px auto" }}
       >
-        <h2 className="save-things">SaveThings</h2>
+        <motion.h2
+          className="save-things"
+          whileHover={{
+            color: "rgb(170, 0, 255)",
+          }}
+        >
+          SaveThings
+        </motion.h2>
         <input
           type="text"
           placeholder="Mobile number"
@@ -101,6 +108,7 @@ const CreateThing = () => {
         <motion.button
           animate={{ scale: 1.2, marginTop: 20 }}
           transition={{ delay: 1 }}
+          whileHover={{ textShadow: "0px 0px 8px rgb(255,255,255)" }}
           className="btn waves-effect waves-light purple accent-4"
           style={{ borderRadius: "5px" }}
           onClick={() => postData()}

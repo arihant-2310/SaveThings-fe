@@ -72,7 +72,13 @@ const FindThing = () => {
           className="card auth-card input-field"
           style={{ margin: "0px auto" }}
         >
-          <h2>FindThings</h2>
+          <motion.h2
+            whileHover={{
+              color: "rgb(170, 0, 255)",
+            }}
+          >
+            FindThings
+          </motion.h2>
           <input
             type="text"
             placeholder="mobile no./your id"
@@ -88,6 +94,7 @@ const FindThing = () => {
           <motion.button
             animate={{ scale: 1.2, marginTop: 20 }}
             transition={{ delay: 0.5 }}
+            whileHover={{ textShadow: "0px 0px 8px rgb(255,255,255)" }}
             className="btn waves-effect waves-light purple accent-4"
             style={{ borderRadius: "5px" }}
             onClick={() => postData()}
