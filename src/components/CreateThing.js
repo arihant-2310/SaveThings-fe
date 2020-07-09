@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import M from "materialize-css";
+import { motion } from "framer-motion";
 
 const CreateThing = () => {
   const history = useHistory();
@@ -92,13 +93,14 @@ const CreateThing = () => {
           value={keywords}
           onChange={(e) => setKeywords(e.target.value)}
         />
-        <button
+        <motion.button
+          animate={{ scale: 1.2, marginTop: 20 }}
           className="btn waves-effect waves-light purple accent-4"
           style={{ borderRadius: "5px" }}
           onClick={() => postData()}
         >
           Keep <i className="material-icons right">note_add</i>
-        </button>
+        </motion.button>
       </div>
     </div>
   );
