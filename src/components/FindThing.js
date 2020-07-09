@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import M from "materialize-css";
+import { motion } from "framer-motion";
 
 const FindThing = () => {
   const history = useHistory();
@@ -73,13 +74,14 @@ const FindThing = () => {
             value={keywords}
             onChange={(e) => setKeywords(e.target.value)}
           />
-          <button
+          <motion.button
+            animate={{ scale: 1.2, marginTop: 20 }}
             className="btn waves-effect waves-light purple accent-4"
             style={{ borderRadius: "5px" }}
             onClick={() => postData()}
           >
             Search <i className="material-icons right">search</i>
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className="card result" style={{ margin: "0px auto" }}>
