@@ -82,6 +82,7 @@ const FindThing = () => {
           />
           <motion.button
             animate={{ scale: 1.2, marginTop: 20 }}
+            transition={{ delay: 0.5 }}
             className="btn waves-effect waves-light purple accent-4"
             style={{ borderRadius: "5px" }}
             onClick={() => postData()}
