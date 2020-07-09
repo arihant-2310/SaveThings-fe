@@ -1,16 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   return (
     <div>
       <nav>
         <div className="nav-wrapper purple accent-4">
-          <a
+          <motion.a
             href="/"
             className="left brand-logo"
             style={{ marginLeft: "10px" }}
+            animate={{ rotateZ: 360 }}
           >
             SaveThings
-          </a>
+          </motion.a>
 
           <ul className="right">
             <li>
