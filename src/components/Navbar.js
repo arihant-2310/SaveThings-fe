@@ -10,7 +10,8 @@ const Navbar = () => {
             href="/"
             className="left brand-logo"
             style={{ marginLeft: "10px" }}
-            animate={{ rotateZ: 360 }}
+            initial={{ y: -250 }}
+            animate={{ y: -2 }}
           >
             SaveThings
           </motion.a>

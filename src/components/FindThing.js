@@ -8,6 +8,8 @@ const FindThing = () => {
   const [userid, setUserid] = useState("");
   const [keywords, setKeywords] = useState("");
   const [data, setData] = useState([]);
+  const [results, setResults] = useState(false);
+  const [content, setContent] = useState(false);
 
   const uploadFields = () => {
     fetch(
@@ -31,6 +33,8 @@ const FindThing = () => {
           });
         } else {
           setData(data.things);
+          setContent(true);
+          setResults(true);
           M.toast({
             html: data.message,
             classes: "#00e676 green accent-3",
@@ -51,6 +55,8 @@ const FindThing = () => {
       });
       return;
     } else {
+      setResults(false);
+      setContent(false);
       uploadFields();
     }
   };
@@ -84,32 +90,49 @@ const FindThing = () => {
           </motion.button>
         </div>
       </div>
-      <div className="card result" style={{ margin: "0px auto" }}>
-        <h4>Results</h4>
-      </div>
+      {results ? (
+        <motion.div
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          className="card result"
+          style={{ margin: "0px auto" }}
+        >
+          <h4>Results</h4>
+        </motion.div>
+      ) : null}
+
       <div className="home">
-        {data.map((item) => {
-          return (
-            <div className="my-card" key={item.id}>
-              <div className="card auth-card" style={{ margin: "0px auto" }}>
-                <div className="card-stacked">
-                  <div className="card-content">
-                    <p>{item.description}</p>
+        {content
+          ? data.map((item) => {
+              return (
+                <motion.div
+                  animate={{ rotateZ: 360 }}
+                  className="my-card"
+                  key={item.id}
+                >
+                  <div
+                    className="card auth-card"
+                    style={{ margin: "0px auto" }}
+                  >
+                    <div className="card-stacked">
+                      <div className="card-content">
+                        <p>{item.description}</p>
+                      </div>
+                      <div className="card-action">
+                        <a
+                          href={item.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.website}
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div className="card-action">
-                    <a
-                      href={item.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.website}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+                </motion.div>
+              );
+            })
+          : null}
       </div>
     </>
   );
