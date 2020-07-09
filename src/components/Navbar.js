@@ -12,7 +12,11 @@ const Navbar = () => {
             style={{ marginLeft: "10px" }}
             initial={{ y: -250 }}
             animate={{ y: -2 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+            transition={{
+              delay: 0.2,
+              type: "spring",
+              stiffness: 120,
+            }}
             whileHover={{
               scale: 1.05,
               textShadow: "0px 0px 8px rgb(255,255,255)",

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Loader from "./Loader";
 const Home = () => {
   return (
     <motion.div
@@ -11,6 +12,7 @@ const Home = () => {
       <h1 className="home-text">
         <span className="blinking">Oh, hi there!</span>
       </h1>
+      <Loader />
     </motion.div>
   );
 };
